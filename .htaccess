@@ -8,3 +8,6 @@ RewriteRule ^policy$ /policy.html [L]
 
 # Redirect /invite to /invitepage.html
 RewriteRule ^invite$ /invitepage.html [L]
+
+# Redirect /support to /support.html
+RewriteRule ^support$ /support.html [L]
