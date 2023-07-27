@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltonix Submit Ticket</title>
+    <link rel="shortcut icon" type="x-icon" href="Voltonix.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            border: 0;
+        }
+
+        .link1 {
+            position: fixed;
+            top: 15px;
+            left: 50px;
+            font-size: 1.5rem;
+            color: rgb(0, 162, 255);
+            text-decoration: none;
+        }
+
+        .link2 {
+            position: fixed;
+            top: 15px;
+            left: 240px;
+            font-size: 1.5rem;
+            color: rgb(0, 162, 255);
+            text-decoration: none;
+        }
+
+        html {
+            color-scheme: dark black;
+        }
+
+        body {
+            height: 100vh;
+            font-family: system-ui;
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: left;
+            padding: 1rem;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 16px;
+            resize: vertical;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17 6l-5 5-5-5h10zM7 13h10v-2H7v2z' fill='%23333'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 0.7rem center;
+            background-size: 10px 10px;
+        }
+
+        .bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(22, 22, 22);
+            padding: 5px;
+            text-align: left;
+            font-size: 0.875rem;
+            color: white;
+            height: 20px;
+        }
+
+        textarea {
+            min-height: 120px;
+        }
+
+        button {
+            padding: 1rem 2rem;
+            background-color: #004a86;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0a4161;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="link1" href="https://voltonix.roblify.com/terms">Terms of Service</a>
+    <a class="link2" href="https://voltonix.roblify.com/policy">Privacy Policy</a>
+
+    <div class="container">
+        <h1>Voltonix Support Form</h1>
+        <form action="https://formsubmit.co/voltonixbot@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://voltonix.roblify.com/thankyou.html" />
+            <input type="hidden" name="_subject" value="New form submission from Voltonix Support Form" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <input type="email" name="Email Address" placeholder="Email" required>
+            <input type="text" name="Subject" placeholder="Subject" required>
+            <select name="Topic">
+                <option>Topic - Bug Report</option>
+                <option>Topic - User Report</option>
+                <option>Topic - Premium Tier Refund</option>
+                <option>Topic - General Question</option>
+                <option>Topic - Premium Bug</option>
+                <option>Topic - Feature Request</option>
+                <option>Topic - Billing Issue</option>
+                <option>Topic - Suggestion</option>
+                <option>Topic - Other</option>
+            </select>
+            <textarea name="Description" placeholder="Description" required></textarea>
+            <button type="submit">Submit</button>
+
+            <div class="bottom-bar">
+                &copy; 2023 Voltonix. All rights reserved.
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
