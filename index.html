@@ -30,6 +30,23 @@
             font-family: 'Roboto', sans-serif;
         }
 
+        .footer-class {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            text-align: center;
+            padding: 10px 0;
+            font-style: italic;
+        }
+
+        .footer-class p {
+            margin: 0;
+            color: #ffffff;
+            font-style: italic;
+        }
+
         @keyframes gradientAnimation {
             0% {
                 background-position: 0% 50%;
@@ -104,6 +121,25 @@
             color: #333;
         }
 
+        .top-links-container {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #2a4d92;
+            padding: 10px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            z-index: 9;
+        }
+
+        .top-links-container a {
+            color: #00a2ff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
         a {
             color: var(--primary-color);
             text-decoration: none;
@@ -158,13 +194,12 @@
                 <li class="grid-item roboto-font">AutoMod setup commands - Configure
                     AutoMod by running Voltonix's AutoMod commands to ensure your server is safer</li>
                 <li class="grid-item roboto-font">Fun commands for everyone to use -
-                    /8ball, /would-you-rather, /flip-coin, and so on...</li>
+                    8ball command, Would you Rather command, Flip a Coin command, and so on...</li>
                 <li class="grid-item roboto-font">Invites command - Checks how many
                     invites a certain user has</li>
                 <li class="grid-item roboto-font">Role commands - Manage adding,
                     removing, or finding information about roles</li>
-                <li class="grid-item roboto-font">AI Commands - /ask-voltonix, and
-                    /imagine</li>
+                <li class="grid-item roboto-font">AI Commands - Talk to AI, Create images through AI</li>
             </ul>
         </div>
 
@@ -175,6 +210,17 @@
                 making your server more easier to manage.</p>
         </div>
     </div>
+
+    <div class="top-links-container">
+        <a href="https://voltonix.roblify.com/invitepage.html">Invite</a>
+        <a href="https://discord.gg/W3yFRCzWM3">Discord Server</a>
+        <a href="https://voltonix.roblify.com/terms">Terms of Service</a>
+        <a href="https://voltonix.roblify.com/policy">Privacy Policy</a>
+    </div>
+
+    <footer class="footer-class">
+        <p>@ 2024 Voltonix - All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>
