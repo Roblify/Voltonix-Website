@@ -1,227 +1,179 @@
 <!DOCTYPE html>
-<html>
-<meta property="og:title" content="Voltonix Home Page">
-<meta property="og:description"
-    content="Information about Voltonix Discord bot, that makes your Discord experience more easier">
-<meta property="og:image"
-    content="https://cdn.discordapp.com/attachments/1101269504266354781/1131115810073612338/Voltonix.png">
-<meta property="og:url" content="https://voltonix.roblify.com/">
+<html lang="en">
 
 <head>
-    <title>Voltonix Home Page</title>
-    <link rel="shortcut icon" type="x-icon" href="Voltonix.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltonix - Better your Discord Experience</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #205a88;
+            --accent-color: #ff9800;
+            --gradient-start: #F8F8F9;
+            --gradient-end: #111439;
+        }
+
         body {
-            font-family: system-ui;
-            font-size: 1.125rem;
-            color: rgb(255, 255, 255);
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
             line-height: 1.6;
-            text-align: left;
-            background-color: rgb(13, 66, 116);
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #2398e6, #1277bb, #136297, #0442a0, #8E44AD, #75398f, #AF7AC5, #8E44AD, #3498db, #48a8e7);
+            background-size: 600% 600%;
+            animation: gradientAnimation 120s ease infinite;
         }
 
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgb(47, 49, 54);
-            padding: 10px;
-            text-align: left;
-            font-size: 0.875rem;
-            color: white;
-            height: 30px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 10px;
-            z-index: 1; /* Ensures the bar is on top of other elements */
+        .roboto-font {
+            font-family: 'Roboto', sans-serif;
         }
 
-        .bar-content {
-            width: 100%;
-            height: 5px; /* Adjust the height of the bar */
-            background-color: rgb(66, 155, 238); /* Color of the bar */
-            position: fixed;
-            top: 30px; /* Height of the top bar */
-            left: 0;
-            z-index: 0; /* Ensures the bar is behind other elements */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
-        .contact-support {
-            position: fixed;
-            top: 12px;
-            left: 60px;
-            font-size: 1rem;
-            color: rgb(66, 155, 238);
-            text-decoration: none;
+        .container {
+            font-family: 'Roboto', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
         }
 
-        .terms-of-service {
-            position: fixed;
-            top: 12px;
-            left: 193px;
-            font-size: 1rem;
-            color: rgb(66, 155, 238);
-            text-decoration: none;
-        }
-
-        .privacy-policy {
-            position: fixed;
-            top: 12px;
-            left: 325px;
-            font-size: 1rem;
-            color: rgb(66, 155, 238);
-            text-decoration: none;
-        }
-
-        .invite {
-            position: fixed;
-            top: 12px;
-            left: 440px;
-            font-size: 1rem;
-            color: rgb(66, 155, 238);
-            text-decoration: none;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Roboto', sans-serif;
+            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         h1 {
-            font-size: 50px;
-            margin-top: 3%;
-            text-align: center;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
         }
 
         h3 {
-            text-align: left;
-            margin-left: 20%;
+            font-size: 1.75em;
         }
 
         p {
-            text-align: left;
-            margin-left: 20%;
+            margin-bottom: 10px;
         }
 
-        li {
-            text-align: left;
-            margin-left: 21%;
+        .section {
+            margin-bottom: 40px;
         }
 
-        a {
-            color: rgb(114, 152, 255);
-            text-decoration: underline;
-        }
-
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgb(12, 52, 83);
-            padding: 10px;
-            text-align: left;
-            font-size: 0.875rem;
-            color: white;
-            height: 30px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .link-box {
-            display: flex;
-            gap: 10px;
-        }
-
-        a {
-            color: rgb(68, 155, 236);
-            /* Darker blue color */
-            text-decoration: underline;
-        }
-
-        .link-box a {
-            color: rgb(0, 0, 150);
-            /* Darker blue color */
-            text-decoration: none;
-            background-color: rgb(0, 172, 134);
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .link-box a:hover {
-            background-color: rgba(0, 255, 200, 0.151);
-        }
-
-        .bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(5, 38, 48, 0.521);
-            padding: 5px;
+        .section-title {
+            font-family: 'Roboto', sans-serif;
             text-align: center;
-            font-size: 0.875rem;
-            color: white;
-            height: 20px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
         }
 
-        .bottom-links {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            overflow-x: auto;
-            white-space: nowrap;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-item:hover {
+            background-color: var(--accent-color);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
+    <div class="container">
+        <h1 class="fade-in">Voltonix - Better your Discord Experience</h1>
 
-    <div class="top-bar">
-        <div class="link-box">
+        <div class="section">
+            <h2 class="section-title">About Voltonix</h2>
+            <p>Voltonix is a Discord bot designed to enhance your server experience. With Voltonix, your server will
+                have more features on it, and make your server a lot more easier to setup.</p>
+            <p>Voltonix is without a doubt the best Moderation bot on the platform, try it out to see yourself!</p>
         </div>
-        <a class="contact-support" href="https://voltonix.roblify.com/support">Contact Support</a>
-        <a class="terms-of-service" href="https://voltonix.roblify.com/terms">Terms of Service</a>
-        <a class="privacy-policy" href="https://voltonix.roblify.com/policy">Privacy Policy</a>
-        <a class="invite" href="https://discord.com/api/oauth2/authorize?client_id=1121951748232318996&permissions=70368744177655&scope=bot%20applications.commands">Invite</a>
-    </div>
 
-    <div class="bar-content"></div>
+        <div class="section">
+            <h2 class="section-title">Features</h2>
+            <ul class="grid">
+                <li class="grid-item roboto-font">Moderation Commands - Warn, kick, mute,
+                    or ban users just by running commands by Voltonix</li>
+                <li class="grid-item roboto-font">AutoMod setup commands - Configure
+                    AutoMod by running Voltonix's AutoMod commands to ensure your server is safer</li>
+                <li class="grid-item roboto-font">Fun commands for everyone to use -
+                    /8ball, /would-you-rather, /flip-coin, and so on...</li>
+                <li class="grid-item roboto-font">Invites command - Checks how many
+                    invites a certain user has</li>
+                <li class="grid-item roboto-font">Role commands - Manage adding,
+                    removing, or finding information about roles</li>
+                <li class="grid-item roboto-font">AI Commands - /ask-voltonix, and
+                    /imagine</li>
+            </ul>
+        </div>
 
-    <br>
-
-    <h1>Voltonix - Better your Discord Experience</h1>
-
-    <h3>About Voltonix</h3>
-    <p>Voltonix is a Discord bot designed to enhance your server experience. With Voltonix, your server<br>will have
-        more features on it, and make your server alot more easier to setup</p>
-    <p>Voltonix is without a doubt the best Moderation bot on the platform, try it out to see yourself!</p>
-
-    <h3>Features</h3>
-    <ul>
-        <li>Moderation Commands - Warn, kick, mute, or ban users just buy running commands by Voltonix</li>
-        <li>AutoMod setup commands - Configure AutoMod by running Voltonix's AutoMod commands to ensure your server is safer</li>
-        <li>Fun commands for everyone to use</li>
-        <li>Invites command - Checks how many invites a certain user has</li>
-        <li>Role commands - Manage adding, removing, or finding information about roles</li>
-        <li>And more...</li>
-    </ul>
-
-    <h3>Use Voltonix today</h3>
-    <p>Ready to experience the capabilities of Voltonix? Join our <a href="https://discord.gg/W3yFRCzWM3">Discord
-            server</a> and invite Voltonix to your server to start making your server more easier to manage.</p>
-
-    <div class="bottom-bar">
-        &copy; 2023-2024 Voltonix. All rights reserved.
-    </div>
-
-    <div class="bottom-links">
-        <a href="https://discord.gg/W3yFRCzWM3">Support Server</a>
-        <a href="https://voltonix.roblify.com/policy">Privacy Policy</a>
-        <a
-            href="https://discord.com/api/oauth2/authorize?client_id=1121951748232318996&permissions=70368744177655&scope=bot%20applications.commands">Invite
-            Voltonix</a>
-        <a href="https://voltonix.roblify.com/terms">Terms of Service</a>
+        <div class="section">
+            <h2 class="section-title">Use Voltonix today</h2>
+            <p>Ready to experience the capabilities of Voltonix? Join our <a
+                    href="https://discord.gg/W3yFRCzWM3">Discord server</a> and invite Voltonix to your server to start
+                making your server more easier to manage.</p>
+        </div>
     </div>
 </body>
 
